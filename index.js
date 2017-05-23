@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 
 app.post('/', (req, res) => {
   if (req.body.token !== process.env.SLACK_TOKEN) {
-    return res.sendStatus(403);
+    return res.sendStatus(403)
   }
 
   if (req.body.challenge) {
